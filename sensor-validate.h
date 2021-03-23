@@ -1,8 +1,15 @@
 #pragma once
 
-bool isParameterValid(double* values);
+class Batterty_Soc
+{
+public:
 
-bool readingInRange(double value, double nextValue, double maxDelta);
+	bool SocReadingInRange(double value, double nextValue, double maxDelta);
 
-bool validateSOCreadings(double* values, int numOfValues);
+	bool validateSOCreadings(double* values, int numOfValues);
+
+	bool validateCurrentreadings(double* values, int numOfValues);
+
+
+};
 
