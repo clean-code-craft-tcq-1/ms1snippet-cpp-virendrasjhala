@@ -23,12 +23,13 @@ TEST_CASE("reports error when current jumps abruptly") {
 	double currentReadings[] = { 0.03, 0.03, 0.03, 0.33 };
 	int numOfCurReadings = sizeof(currentReadings) / sizeof(currentReadings[0]);
 
-	Batterty_Soc checkparameter;
-	REQUIRE(checkparameter.isParameterValid(currentReadings) == true);
-
+	Batterty_Soc c_parameter;
+	REQUIRE(c_parameter.isParameterValid(currentReadings) == true);
+        /*
 	Batterty_Soc Batterty_Soc;
 	REQUIRE(Batterty_Soc.validateCurrentreadings(currentReadings, numOfCurReadings) == false);
 	//system("pause");
+	*\
 }
 
 
