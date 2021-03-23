@@ -19,10 +19,6 @@ bool Batterty_Soc::validateSOCreadings(double* values, int numOfValues) {
 			}
 		}
 	}
-	else
-	{
-		std::cout << "SOC values are not valid";
-	}
 	return true;
 }
 
