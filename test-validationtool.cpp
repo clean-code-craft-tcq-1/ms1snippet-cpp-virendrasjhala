@@ -25,11 +25,11 @@ TEST_CASE("reports error when current jumps abruptly") {
 
 	Batterty_Soc c_parameter;
 	REQUIRE(c_parameter.isParameterValid(currentReadings) == true);
-        /*
-	Batterty_Soc Batterty_Soc;
-	REQUIRE(Batterty_Soc.validateCurrentreadings(currentReadings, numOfCurReadings) == false);
+       
+	//Batterty_Soc Batterty_Soc;
+	//REQUIRE(Batterty_Soc.validateCurrentreadings(currentReadings, numOfCurReadings) == false);
 	//system("pause");
-	*\
+
 }
 
 
