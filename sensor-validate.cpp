@@ -9,32 +9,21 @@ bool Batterty_Soc::SocReadingInRange(double value, double nextValue, double maxD
 	return true;
 }
 
-bool Batterty_Soc::socParamters(double* values, int numOfValues)
+bool Batterty_Soc::readings(double* parameters, int numOfParameters)
 {
-	int lastButOneIndex = numOfValues - 1;
+	int lastButOneIndex = numOfParameters - 1;
 	for (int i = 0; i < lastButOneIndex; i++) {
-		if (!SocReadingInRange(values[i], values[i + 1], 0.05)) {
-			return false;
-		}
-	}
-	return false;
-}
-
-bool Batterty_Soc::validateSOCreadings(double* values, int numOfValues) {
-	if (values != nullptr) {
-		
-		return socParamters(values, numOfValues);
-	}
-	
-	
-}
-
-bool Batterty_Soc::validateCurrentreadings(double* values, int numOfValues) {
-	int lastButOneIndex = numOfValues - 1;
-	for (int i = 0; i < lastButOneIndex; i++) {
-		if (!SocReadingInRange(values[i], values[i + 1], 0.1)) {
+		if (!SocReadingInRange(parameters[i], parameters[i + 1], 0.05)) {
 			return false;
 		}
 	}
 	return true;
 }
+
+bool Batterty_Soc::validateSOCreadings(double* values, int numOfValues) {
+
+	if (values != nullptr){
+		return readings(values,numOfValues);
+	}
+}
+
