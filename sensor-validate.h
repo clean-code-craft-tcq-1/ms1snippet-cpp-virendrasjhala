@@ -4,11 +4,13 @@ class Batterty_Soc
 {
 public:
 
-	bool SocReadingInRange(double value, double nextValue, double maxDelta);
-	bool readings(double* parameters, int numOfParameters);
+	bool readings_InRange(double value, double nextValue, double maxDelta);
+
+	bool isParameterValid(double* parameters);
+
 	bool validateSOCreadings(double* values, int numOfValues);
 
-	//bool validateCurrentreadings(double* values, int numOfValues);
+	bool validateCurrentreadings(double* values, int numOfValues);
 
 
 };
