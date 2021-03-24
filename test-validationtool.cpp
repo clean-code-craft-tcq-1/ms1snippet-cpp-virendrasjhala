@@ -14,7 +14,6 @@ TEST_CASE("reports error when soc jumps abruptly") {
 	REQUIRE(checkparameter.isParameterValid(socReadings) == true);
 	/*--------------------------------------------Soc reading Check-------------------------------------------*/
 	REQUIRE(checksoc.validateSOCreadings(socReadings, numOfSocReadings) == false);
-	
 }
 
 TEST_CASE("reports error when current jumps abruptly") {
@@ -25,6 +24,4 @@ TEST_CASE("reports error when current jumps abruptly") {
 	REQUIRE(checkparameter.isParameterValid(currentReadings) == true);
 	/*--------------------------------------------current reading Check---------------------------------------*/
 	REQUIRE(checkcurrent.validateCurrentreadings(currentReadings, numOfCurReadings) == false);
-	
-
- 
+}
