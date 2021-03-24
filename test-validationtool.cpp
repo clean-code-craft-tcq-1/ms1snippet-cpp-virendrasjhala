@@ -27,4 +27,4 @@ TEST_CASE("reports error when current jumps abruptly") {
 	REQUIRE(checkcurrent.validateCurrentreadings(currentReadings, numOfCurReadings) == false);
 	
 
-
+ 
