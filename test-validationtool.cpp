@@ -5,7 +5,6 @@
 #include "sensor-validate.h"
 
 
-
 TEST_CASE("reports error when soc jumps abruptly") {
 	double socReadings[] = { 0.0, 0.01, 0.5, 0.51 };
 	int numOfSocReadings = sizeof(socReadings) / sizeof(socReadings[0]);
@@ -14,6 +13,7 @@ TEST_CASE("reports error when soc jumps abruptly") {
 	REQUIRE(checkparameter.isParameterValid(socReadings) == true);
 	/*--------------------------------------------Soc reading Check-------------------------------------------*/
 	REQUIRE(checksoc.validateSOCreadings(socReadings, numOfSocReadings) == false);
+	
 }
 
 TEST_CASE("reports error when current jumps abruptly") {
@@ -24,4 +24,7 @@ TEST_CASE("reports error when current jumps abruptly") {
 	REQUIRE(checkparameter.isParameterValid(currentReadings) == true);
 	/*--------------------------------------------current reading Check---------------------------------------*/
 	REQUIRE(checkcurrent.validateCurrentreadings(currentReadings, numOfCurReadings) == false);
+	
 }
+
+

@@ -2,13 +2,13 @@
 #include"iostream"
 #define nullptr NULL
 
-bool Interface_To_PV::readings_InRange(double value, double nextValue, double maxDelta) {
+bool Parameter_Verification_Interface::readings_InRange(double value, double nextValue, double maxDelta) {
 	if (nextValue - value > maxDelta) {
 		return false;
 	}
 	return true;
 }
-bool Interface_To_PV::isParameterValid(double* parameters) {
+bool Parameter_Verification_Interface::isParameterValid(double* parameters) {
 	if (parameters == nullptr) {
 		return false;
 	}
