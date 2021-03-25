@@ -1,6 +1,25 @@
+#pragma once
+class ParameterVerification{
 
-bool _give_me_a_good_name(double value, double nextValue, double maxDelta);
+public:
+	virtual bool readings_InRange(double value, double nextValue, double maxDelta) = 0;
+	virtual bool isParameterValid(double* parameters) = 0;
+};
 
-bool validateSOCreadings(double* values, int numOfValues);
+class Parameter_Verification_Interface :public ParameterVerification {
 
-bool validateCurrentreadings(double* values, int numOfValues);
+public:
+	bool readings_InRange(double value, double nextValue, double maxDelta);
+	bool isParameterValid(double* parameters);
+	
+};
+
+class validation:public Parameter_Verification_Interface {
+
+public:
+	bool validateSOCreadings(double* values, int numOfValues);
+	bool validateCurrentreadings(double* values, int numOfValues);
+};
+
+
+
